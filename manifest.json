@@ -1,0 +1,86 @@
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://example.org/iiif/collection/top",
+  "type": "Collection",
+  "label": { "en": [ "BL 12270.k.9 - The Iliad of Homer, Translated by Mr. Pope" ] },
+  "summary": { "en": [ "The six volumes of 12270.k.9" ] },
+  "requiredStatement": {
+    "label": { "en": [ "Attribution" ] },
+    "value": { "en": [ "Provided by the British Library" ] }
+  },
+
+  "items": [
+    {
+      "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_000000038904/manifest.json",
+      "type": "Manifest",
+      "label": { "en": [ "Volume 1" ] },
+      "thumbnail": [
+        {
+          "id": "https://api.bl.uk/image/iiif/ark:/81055/vdc_000000038900.0x00000D/full/max/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg"
+        }
+      ]
+    }
+    {
+      "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_000000032382/manifest.json",
+      "type": "Manifest",
+      "label": { "en": [ "Volume 2" ] },
+      "thumbnail": [
+        {
+          "id": "https://api.bl.uk/image/iiif/ark:/81055/vdc_00000003237E.0x00000D/full/max/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg"
+        }
+      ]
+    }
+    {
+      "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_000000038946/manifest.json",
+      "type": "Manifest",
+      "label": { "en": [ "Volume 3" ] },
+      "thumbnail": [
+        {
+          "id": "https://api.bl.uk/image/iiif/ark:/81055/vdc_000000038942.0x00000B/full/max/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg"
+        }
+      ]
+    }
+    {
+      "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_00000003895E/manifest.json",
+      "type": "Manifest",
+      "label": { "en": [ "Volume 4" ] },
+      "thumbnail": [
+        {
+          "id": "https://api.bl.uk/image/iiif/ark:/81055/vdc_00000003895A.0x00000B/full/max/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg"
+        }
+      ]
+    }
+    {
+      "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_000000038976/manifest.json",
+      "type": "Manifest",
+      "label": { "en": [ "Volume 5" ] },
+      "thumbnail": [
+        {
+          "id": "https://api.bl.uk/image/iiif/ark:/81055/vdc_000000038972.0x00000B/full/max/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg"
+        }
+      ]
+    }
+    {
+      "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_0000000389B2/manifest.json",
+      "type": "Manifest",
+      "label": { "en": [ "Volume 6" ] },
+      "thumbnail": [
+        {
+          "id": "https://api.bl.uk/image/iiif/ark:/81055/vdc_0000000389AE.0x00000B/full/max/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg"
+        }
+      ]
+    }
+  ]
+}
