@@ -1,75 +1,41 @@
 {
-	"@context": "http://iiif.io/api/presentation/2/context.json",
-	"@id": "https://benjaminpauley.github.io/manifest.json",
-	"@type": "sc:Manifest",
-	"label": "BL Iliad",
-	"metadata": [],
-	"description": [
-		{
-			"@value": "One page of the BL Iliad, vol. 2",
-			"@language": "en"
-		}
-	],
-	"license": "https://creativecommons.org/publicdomain/mark/1.0/",
-	"attribution": "The British Library",
-	"sequences": [
-		{
-			"@id": "http://d2fc2fcb-0e30-4920-84cb-ca31337638fa",
-			"@type": "sc:Sequence",
-			"label": [
-				{
-					"@value": "Normal Sequence",
-					"@language": "en"
-				}
-			],
-			"canvases": [
-				{
-					"@id": "http://115414da-1a04-41f5-aac8-09d82e88394a",
-					"@type": "sc:Canvas",
-					"label": "tp",
-					"height": "3126",
-					"width": "2254",
-					"images": [
-						{
-							"@context": "http://iiif.io/api/presentation/2/context.json",
-							"@id": "http://d5674d48-96cf-46e1-813c-3fae46626905",
-							"@type": "oa:Annotation",
-							"motivation": "sc:painting",
-							"resource": {
-								"@id": "https://api.bl.uk/image/iiif/ark:/81055/vdc_00000003237E.0x00000D/full/full/0/default.jpg",
-								"@type": "dctypes:Image",
-								"format": "image/jpeg",
-								"service": {
-									"@context": "http://iiif.io/api/image/2/context.json",
-									"@id": "https://api.bl.uk/image/iiif/ark:/81055/vdc_00000003237E.0x00000D",
-									"profile": [
-										"http://iiif.io/api/image/2/level2.json",
-										{
-											"qualities": [
-												"gray",
-												"color",
-												"bitonal"
-											],
-											"supports": [
-												"rotationArbitrary",
-												"mirroring",
-												"regionSquare",
-												"profileLinkHeader"
-											]
-										}
-									]
-								},
-								"height": 3126,
-								"width": 2254
-							},
-							"on": "http://115414da-1a04-41f5-aac8-09d82e88394a"
-						}
-					],
-					"related": ""
-				}
-			]
-		}
-	],
-	"structures": [],
-	"viewingDirection": "left-to-right"
+   "@context": "http://iiif.io/api/presentation/2/context.json",
+      "@id": "https://benjaminpauley.github.io/collection.json",
+   "@type": "sc:Collection",
+   "label": "The Iliad of Homer, Translated by Mr. Pope",
+   "description": "Six Volumes of Pope's Iliad at the BL",
+   "thumbnail": "https://api.bl.uk/image/iiif/ark:/81055/vdc_000000038900.0x00000D/full/max/0/default.jpg",
+   "attribution": "The British Library",
+   "manifests": [
+     {
+      "@id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_000000038904/manifest.json",
+        "@type": "sc:Manifest",
+        "label": "Volume 1."
+     },
+     {
+      "@id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_000000032382/manifest.json",
+        "@type": "sc:Manifest",
+        "label": "Volume 2."
+     },
+     {
+      "@id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_000000038946/manifest.json",
+        "@type": "sc:Manifest",
+        "label": "Volume 3."
+     },
+     {
+      "@id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_00000003895E/manifest.json",
+        "@type": "sc:Manifest",
+        "label": "Volume 4."
+     },
+     {
+      "@id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_000000038976/manifest.json",
+        "@type": "sc:Manifest",
+        "label": "Volume 5."
+     },
+     {
+      "@id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_0000000389B2/manifest.json",
+        "@type": "sc:Manifest",
+        "label": "Volume 6."
+     }
+   ]
 }
