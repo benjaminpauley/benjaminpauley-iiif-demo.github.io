@@ -1,0 +1,75 @@
+{
+	"@context": "http://iiif.io/api/presentation/2/context.json",
+	"@id": "http://48ed0d7b-934b-44ec-8742-1254f29fd8c7",
+	"@type": "sc:Manifest",
+	"label": "OxfordPopeTest",
+	"metadata": [],
+	"description": [
+		{
+			"@value": "[Click to edit description]",
+			"@language": "en"
+		}
+	],
+	"license": "https://creativecommons.org/licenses/by/3.0/",
+	"attribution": "[Click to edit attribution]",
+	"sequences": [
+		{
+			"@id": "http://c4c36ac4-b3f9-4693-b067-abc16d5ca664",
+			"@type": "sc:Sequence",
+			"label": [
+				{
+					"@value": "Normal Sequence",
+					"@language": "en"
+				}
+			],
+			"canvases": [
+				{
+					"@id": "http://97c38615-fe0b-4a66-9322-dcc7551eba02",
+					"@type": "sc:Canvas",
+					"label": "Empty canvas",
+					"height": 3136,
+					"width": 2307,
+					"images": [
+						{
+							"@context": "http://iiif.io/api/presentation/2/context.json",
+							"@id": "http://8526bb96-b69f-45f2-997b-93a60d220fe7",
+							"@type": "oa:Annotation",
+							"motivation": "sc:painting",
+							"resource": {
+								"@id": "https://api.bl.uk/image/iiif/ark:/81055/vdc_000000038900.0x00000D/full/full/0/default.jpg",
+								"@type": "dctypes:Image",
+								"format": "image/jpeg",
+								"service": {
+									"@context": "http://iiif.io/api/image/2/context.json",
+									"@id": "https://api.bl.uk/image/iiif/ark:/81055/vdc_000000038900.0x00000D",
+									"profile": [
+										"http://iiif.io/api/image/2/level2.json",
+										{
+											"qualities": [
+												"gray",
+												"color",
+												"bitonal"
+											],
+											"supports": [
+												"rotationArbitrary",
+												"mirroring",
+												"regionSquare",
+												"profileLinkHeader"
+											]
+										}
+									]
+								},
+								"height": 3136,
+								"width": 2307
+							},
+							"on": "http://97c38615-fe0b-4a66-9322-dcc7551eba02"
+						}
+					],
+					"related": ""
+				}
+			]
+		}
+	],
+	"structures": [],
+	"viewingDirection": "left-to-right"
+}
