@@ -1,6 +1,6 @@
 {
    "@context": "http://iiif.io/api/presentation/2/context.json",
-   "@id": "https://benjaminpauley.github.io/collection/top",
+   "@id": "https://benjaminpauley.github.io/collection",
    "@type": "sc:Collection",
    "label": "The Iliad of Homer, Translated by Mr. Pope",
    "description": "Six Volumes of Pope's Iliad at the BL",
