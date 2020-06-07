@@ -1,6 +1,6 @@
 {
 	"@context": "http://iiif.io/api/presentation/2/context.json",
-	"@id": "http://48ed0d7b-934b-44ec-8742-1254f29fd8c7",
+	"@id": "https://benjaminpauley.github.io/manifest-4.json",
 	"@type": "sc:Manifest",
 	"label": "OxfordPopeTest",
 	"metadata": [],
