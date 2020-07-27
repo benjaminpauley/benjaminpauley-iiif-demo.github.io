@@ -1,10 +1,93 @@
-<html>
-  <head><title>IIIF Testing</title></head>
+<head>
+    <title>Mirador Sample</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the Mirador 3️⃣ -->
+    <script src="https://unpkg.com/mirador@rc/dist/mirador.min.js"></script>
+  </head>  
   <body>
-    <h1>Testing IIIF Manifest</h1>
-    <div>Is this thing on?</div>
-    <ul>
-      <li><a href=""> </a></li>
-    </ul>
+    <h1>Hi there!</h1>
+    
+    <p>
+      A sample Mirador viewer
+    </p>
+    <div id="mirador"></div>
+    <script type="text/javascript">
+      const mirador = Mirador.viewer({
+        id: "mirador",
+        windows: [
+          {manifestId: 'https://api.bl.uk/metadata/iiif/ark:/81055/vdc_0000000431B2/manifest.json'
+          },
+          {manifestId: 'https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100037023297.0x000001/manifest.json'}
+        ]
+        // All of the settings (with descriptions (ﾉ^∇^)ﾉﾟ) located here:
+        // https://github.com/ProjectMirador/mirador/blob/master/src/config/settings.js
+      });
+    </script>
+
+    <hr>
+
+    <div id="mirador2"></div>
+
+    <script type="text/javascript">
+      Mirador.viewer({
+        id: "mirador2",
+        // Look you can open up Mirador with windows!!
+        windows: [
+          {
+            manifestId: 'https://purl.stanford.edu/dy727pk7274/iiif/manifest'
+          },
+          {
+            manifestId: 'https://iiif.bodleian.ox.ac.uk/iiif/manifest/faeff7fb-f8a7-44b5-95ed-cff9a9ffd198.json',
+            canvasIndex: 75
+          }
+        ],
+        catalog: [
+          {
+            manifestId: 'https://api.bl.uk/metadata/iiif/ark:/81055/vdc_000000057F54/manifest.json'
+          },
+          {
+            manifestId: 'https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100054724072.0x000001/manifest.json'
+            },
+          {
+            manifestId: 'https://api.bl.uk/metadata/iiif/ark:/81055/vdc_0000000431B2/manifest.json'
+          },
+          {
+            manifestId: 'https://api.bl.uk/metadata/iiif/ark:/81055/vdc_0000000431A0/manifest.json'
+          },
+          {
+            manifestId: 'https://api.bl.uk/metadata/iiif/ark:/81055/vdc_0000000431A6/manifest.json'
+          },
+          {
+            manifestId: 'https://api.bl.uk/metadata/iiif/ark:/81055/vdc_0000000431AC/manifest.json'
+          },
+          {
+            manifestId: 'https://api.bl.uk/metadata/iiif/ark:/81055/vdc_0000000431AC/manifest.json'
+          },
+          {
+            manifestId: 'https://api.bl.uk/metadata/iiif/ark:/81055/vdc_0000000431B8/manifest.json'
+          },
+          {
+            manifestId: 'https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100025633105.0x000001/manifest.json'
+          },
+          {
+            manifestId: 'https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100037023031.0x000001/manifest.json'
+          },
+          {
+            manifestId: 'https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100037023297.0x000001/manifest.json'
+          }
+        ]
+      });
+    </script>
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
   </body>
 </html>
