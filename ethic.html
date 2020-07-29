@@ -1,0 +1,41 @@
+<head>
+    <title>Mirador Sample</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the Mirador 3️⃣ -->
+    <script src="https://unpkg.com/mirador@3.0.0-rc.3/dist/mirador.min.js"></script>
+  </head>  
+  <body>    
+    <p>
+      A sample Mirador viewer, showing the manuscript of Pope's <em>Ethic Epistles</em> held by Harvard University 
+      (fMS Eng 233.1 [1]) alongside a copy of an early issue of the text (Griffith 305) held by the Wellcome Library
+      (25648/B), a scan of which is available at the Internet Archive.
+    </p>
+    <div id="mirador"></div>
+    <script type="text/javascript">
+      const mirador = Mirador.viewer({
+        id: "mirador",
+        defaultview: 'book',
+        windows: [ 
+         {
+             manifestId: 'https://iiif.lib.harvard.edu/manifests/drs:51531353',
+             canvasId: 'https://iiif.lib.harvard.edu/manifests/drs:51531353/range/range-0-5.json'
+          },
+          {
+             manifestId: 'https://iiif.archivelab.org/iiif/b3054466x/manifest.json',
+             canvasId: 'https://iiif.archivelab.org/iiif/b3054466x$7/canvas'
+              
+          }
+        ]
+        
+        // All of the settings (with descriptions (ﾉ^∇^)ﾉﾟ) located here:
+        // https://github.com/ProjectMirador/mirador/blob/master/src/config/settings.js
+      });
+    </script>
+  </body>
+</html>
