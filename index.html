@@ -21,10 +21,15 @@
     <script type="text/javascript">
       const mirador = Mirador.viewer({
         id: "mirador",
-        windows: [
-          {manifestId: 'https://api.bl.uk/metadata/iiif/ark:/81055/vdc_0000000431B2/manifest.json'
+        defaultview: 'book',
+        windows: [ 
+         {
+             manifestId: 'https://api.bl.uk/metadata/iiif/ark:/81055/vdc_0000000431B2/manifest.json'
           },
-          {manifestId: 'https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100037023297.0x000001/manifest.json'}
+          {
+             manifestId: 'https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100037023297.0x000001/manifest.json',
+              canvasId: 'https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100037023306.0x000002'
+          }
         ],
         catalog: [
           {
