@@ -20,13 +20,7 @@
     <script type="text/javascript">
       const mirador = Mirador.viewer({
         id: "mirador",
-        defaultview: "single",
-        views: [
-            { key: 'single', behaviors: ['individuals'] },
-            { key: 'book', behaviors: ['paged'] },
-            { key: 'scroll', behaviors: ['continuous'] },
-            { key: 'gallery' },
-        ],
+        defaultView: "single",
         windows: [ 
          {
              manifestId: 'https://iiif.lib.harvard.edu/manifests/drs:51531353',
