@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>Selecting a Region from a Remote IIIF Image</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type='text/javascript'>
+function buildURL() {
+	var xvalue = document.getElementById('xaxis').value;
+	var yvalue = document.getElementById('yaxis').value;
+	var newurl = 'https://api.bl.uk/image/iiif/ark:/81055/vdc_0000000389AE.0x00000B/' + xvalue + ',' + yvalue + ',300,300/max/0/default.jpg';
+	var image = document.getElementById('iiif-region');
+	image.setAttribute('src', newurl);
+}
+function displayURL() {
+	pattern = /\d{1,4}\,\d{1,4}\,300\,300/;
+	var currenturl = document.getElementById('iiif-region').getAttribute('src');
+	var coordstring = String(pattern.exec(currenturl));
+	coords = coordstring.split(',');
+// 	alert(coords[0])
+	xvalue = coords[0];
+	xplus = Number(coords[0]) + 300;
+	xscaled = Number(xvalue) * .25;
+	yvalue = coords[1];
+	yplus = Number(coords[1]) + 300;
+	yscaled = Number(yvalue) * .25;
+	upperleft = String(xvalue) + ',' + String(yvalue);
+	upperright = String(xplus) + ',' + String(yvalue);
+	lowerleft = String(xvalue) + ',' + String(yplus);
+	lowerright = String(xplus) + ',' + String(yplus);
+	document.getElementById('upper-left').innerText = upperleft;
+	document.getElementById('upper-right').innerText = upperright;
+	document.getElementById('lower-left').innerText = lowerleft;
+	document.getElementById('lower-right').innerText = lowerright;
+	document.getElementById('urlused').innerText = currenturl;
+	var canvas = document.getElementById('overlay');
+	var context = canvas.getContext('2d');
+	context.clearRect(0,0,569,773)
+	context.strokeRect(xscaled,yscaled,75,75);
+}
+function scaled() {
+	var c = document.getElementById('iiif-scaled');
+	var ctx = c.getContext('2d');
+	var scaledImage = new Image();
+	
+    scaledImage.onload = function() {
+	ctx.drawImage(scaledImage, 0, 0);
+} 
+scaledImage.src = 'https://api.bl.uk/image/iiif/ark:/81055/vdc_0000000389AE.0x00000B/full/569,/0/default.jpg';
+	// var canvas = document.getElementById('iiif-scaled');
+// 	var context = canvas.getContext('2d');
+// 	context.strokeRect(0,0,75,75)
+}
+</script>
+<script>
+
+</script>
+<style>
+body {
+	width: 80%;
+	display: block;
+}
+div {
+	
+	margin-bottom: 1em;
+	padding-left: 5%;
+}
+h1 {
+	text-align: center;
+}
+#change {
+	text-align: center;
+}
+
+.center {
+	margin-left: 25%;
+}
+
+#iiif-region{
+	margin-left: 35%;
+}
+</style>
+</head>
+
+<body onload='scaled(); displayURL();'>
+<h1>Displaying Remote Images using IIIF</h1>
+<div>This is a 300-pixel x 300-pixel detail of a region of a high-resolution scan of the title page of volume 6 of Pope's translation of Homer's Iliad, displayed at maximum size. The image is <em>not</em> stored on the server on which this page is located, but is instead being served from the British Library using the IIIF Image API.</div>
+<div>The page is currently displaying the region of the image located at the following coordinates:
+<ul>
+<li>Upper left corner: <span id='upper-left'></span></li>
+<li>Upper right corner: <span id='upper-right'></span></li>
+<li>Lower left corner: <span id='lower-left'></span></li>
+<li>Lower right corner: <span id='lower-right'></span></li>
+</ul>
+It is presenting this region of the image by loading the following url: <br \> <span id='urlused'></span>
+</div>
+
+<div>To change the region of the image that is displayed, type new values into the fields for the X- and Y-axes. These values will determine where the upper left corner of the selected region begins.</div>
+<div>
+<form id='change'>
+<label for="xaxis">X-axis (0-1976):</label>
+<input type="text" id="xaxis" name="xaxis">
+<label for="yaxis">Y-axis (0-2793):</label>
+<input type="text" id="yaxis" name="yaxis">
+<button type="button" onclick="buildURL(); displayURL();">Select</button>
+</form>
+</div>
+<div><img id='iiif-region' src='https://api.bl.uk/image/iiif/ark:/81055/vdc_0000000389AE.0x00000B/1700,25,300,300/max/0/default.jpg'></div>
+<div>This is a view of the full page, scaled down to twenty-five percent of its maximum size, showing the detail region selected above.</div>
+<div class='center' style='position: relative;'>
+<canvas id='iiif-scaled' width='569' height='773' style='position: absolute; left: 0px; top: 0px; z-index: 1;'></canvas>
+<canvas id='overlay' width='569' height='773' style='position: absolute; left: 0px; top: 0px; z-index: 2;'></canvas>
+
+</div> 
+</body>
+</html>
