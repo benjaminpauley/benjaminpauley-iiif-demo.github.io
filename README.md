@@ -1,1 +1,1 @@
-# benjaminpauley-iiif-demo.github.io
+# benjaminpauley.github.io
